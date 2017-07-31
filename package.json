@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "cross-env": "^5.0.1",
     "react": "next",
     "react-dom": "next",
     "react-scripts": "1.0.10",
