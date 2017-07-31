@@ -1,11 +1,17 @@
 import React from 'react'
 
+import Tabs from 'components/Tabs'
+
 class App extends React.Component {
   static displayName = 'App'
 
   render() {
     return (
-      <div>App</div>
+      <main>
+        <Tabs>
+          tabs!
+        </Tabs>
+      </main>
     )
   }
 }
