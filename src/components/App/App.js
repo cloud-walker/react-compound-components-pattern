@@ -16,7 +16,7 @@ class App extends React.Component {
             <Tab>
               <i>second tab</i>
             </Tab>
-            <Tab>
+            <Tab disabled>
               <div style={{background: 'lightblue'}}>
                 third tab
               </div>
