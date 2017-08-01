@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Component = () => (
-  <div>TabPanel</div>
+const Component = props => (
+  <div>{props.children}</div>
 )
 
 Component.displayName = 'TabPanel'
