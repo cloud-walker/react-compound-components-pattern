@@ -1,7 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import Tabs, {Tab, TabList, TabPanel, TabPanels} from 'components/Tabs'
+import Tabs from 'components/Tabs'
 
+const TabPanel = styled(Tabs.TabPanel)`
+  color: red;
+`
 class App extends React.Component {
   static displayName = 'App'
 
@@ -9,21 +13,19 @@ class App extends React.Component {
     return (
       <main>
         <Tabs>
-          <TabList>
-            <Tab>
+          <Tabs.TabList>
+            <Tabs.Tab>
               <a href="sadad" onClick={e => e.preventDefault()}>first tab</a>
-            </Tab>
-            <Tab>
+            </Tabs.Tab>
+            <Tabs.Tab>
               <i>second tab</i>
-            </Tab>
-            <Tab disabled>
-              <div style={{background: 'lightblue'}}>
-                third tab
-              </div>
-            </Tab>
-          </TabList>
+            </Tabs.Tab>
+            <Tabs.Tab>
+              button
+            </Tabs.Tab>
+          </Tabs.TabList>
 
-          <TabPanels>
+          <Tabs.TabPanels>
             <TabPanel>
               <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui vero excepturi error odit maiores nobis reprehenderit omnis ducimus veritatis, tempore accusantium sequi veniam inventore magni, voluptas illo eligendi! Deleniti, inventore.</pre>
             </TabPanel>
@@ -36,7 +38,7 @@ class App extends React.Component {
               <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam ullam alias ex, suscipit illum quas dolor consequatur velit, eius, libero expedita adipisci nulla omnis ipsam cumque non quod. Vero, nulla.
               </i>
             </TabPanel>
-          </TabPanels>
+          </Tabs.TabPanels>
         </Tabs>
       </main>
     )

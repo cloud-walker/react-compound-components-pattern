@@ -1,13 +1,9 @@
 import React from 'react'
 
-const Component = ({children, active, disabled, onActivate}) => (
+const Component = ({children, active, disabled, onActivate, ...rest}) => (
   <div
     onClick={!disabled && onActivate}
-    style={{
-      borderBottom: active ? '4px solid' : 'none',
-      marginRight: '1em',
-      color: disabled ? 'grey' : 'black',
-    }}
+    {...rest}
   >
     {children}
   </div>

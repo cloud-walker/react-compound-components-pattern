@@ -2,9 +2,15 @@ import React from 'react'
 
 import TabPanels from './TabPanels'
 import TabList from './TabList'
+import Tab from './Tab'
+import TabPanel from './TabPanel'
 
 const Component = class extends React.Component {
   static displayName = 'Tabs'
+  static TabList = TabList
+  static Tab = Tab
+  static TabPanels = TabPanels
+  static TabPanel = TabPanel
 
   state = {activeIndex: 1}
 

@@ -1,21 +1,19 @@
 import React from 'react'
 
-const Component = class extends React.Component {
-  render() {
-    const children = React.Children.map(
-      this.props.children,
-      (child, i) => React.cloneElement(child, {
-        active: this.props.activeIndex == i,
-        onActivate: () => {
-          this.props.onActiveTab(i)
-        }
-      }),
-    )
-    return (
-      <div style={{display: 'flex'}}>{children}</div>
-    )
-  }
-}
+const Component = ({
+  children,
+  activeIndex,
+  onActiveTab,
+  ...rest
+}) => (console.log('sadsad', onActiveTab, activeIndex),
+  <div {...rest}>{React.Children.map(
+    children,
+    (child, i) => React.cloneElement(child, {
+      active: activeIndex == i,
+      onActivate: () => onActiveTab(i),
+    }),
+  )}</div>
+)
 
 Component.displayName = 'TabList'
 
