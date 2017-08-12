@@ -9,7 +9,7 @@ const Component = ({
   <div {...rest}>{React.Children.map(
     children,
     (child, i) => React.cloneElement(child, {
-      active: activeIndex == i,
+      active: activeIndex === i,
       onActivate: () => onActiveTab(i),
     }),
   )}</div>
